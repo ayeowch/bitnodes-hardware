@@ -36,6 +36,7 @@ setup(
     license='MIT',
     packages=find_packages(),
     install_requires=[
+        'Celery',
         'Django',
         'django-debug-toolbar',
         'django-supervisor',
