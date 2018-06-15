@@ -1,4 +1,4 @@
-![Bitnodes Hardware](https://hw.bitnodes.io/static/img/bitnodes-hardware-github.png "Bitnodes Hardware")
+# Bitnodes Hardware (discontinued)
 
 Thank you for purchasing Bitnodes Hardware!
 
@@ -35,10 +35,10 @@ Note that the equivalent fields may be named differently depending on the make a
 | Public status page | `LAN_IP_ADDRESS`    | 1008          | 1008          |
 | Bitcoin client     | `LAN_IP_ADDRESS`    | 8333          | 8333          |
 
-Restart your Bitnodes Hardware from its administration page for the changes to take effect. You should now be able to access the public status page for your Bitnodes Hardware from `http://WAN_IP_ADDRESS:1008`. Enter your `WAN_IP_ADDRESS` in https://bitnodes.21.co/#join-the-network to confirm that your Bitcoin client is accepting incoming connections.
+Restart your Bitnodes Hardware from its administration page for the changes to take effect. You should now be able to access the public status page for your Bitnodes Hardware from `http://WAN_IP_ADDRESS:1008`. Enter your `WAN_IP_ADDRESS` in https://getaddr.bitnodes.io/#join-the-network to confirm that your Bitcoin client is accepting incoming connections.
 
 ## Help
-If you need assistance setting up your Bitnodes Hardware, please post your questions in https://forum.bitnodes.io/c/bitnodes-hardware or send an email to service@bitnodes.io.
+If you need assistance setting up your Bitnodes Hardware, please send an email to service@bitnodes.io.
 
 ## Hardware Features
 * Amlogic Quad-Core ARM Cortex-A5 1.5GHz CPU
@@ -74,19 +74,6 @@ If you need assistance setting up your Bitnodes Hardware, please post your quest
 * Administration interface is accessible only from private networks
 * Hardware RNG enabled to increase system entropy for use by /dev/random
 * Bitcoin client compiled without wallet to ensure it operates only as a full node
-
-## Screenshots
-### Dashboard
-![Dashboard](https://hw.bitnodes.io/static/img/screenshots/1-dashboard.png?v1 "Dashboard")
-
-### Node Status
-![Node Status](https://hw.bitnodes.io/static/img/screenshots/2-node-status.png?v1 "Node Status")
-
-### System Status
-![System Status](https://hw.bitnodes.io/static/img/screenshots/3-system-status.png?v1 "System Status")
-
-### Bandwidth Limit
-![Bandwidth Limit](https://hw.bitnodes.io/static/img/screenshots/4-bandwidth-limit.png?v1 "Bandwidth Limit")
 
 ## Developer Guide
 The sections below describe the steps that were taken to configure your Bitnodes Hardware prior to dispatch. These sections are for your reference only. You are NOT required to execute any of the steps below to start your Bitnodes Hardware.
@@ -314,7 +301,7 @@ Detach the eMMC from the back of the main board of your Bitnodes Hardware. Attac
 
     $ df -h
 
-Unmount the boot volume as shown in the output of the `df` command, e.g. /dev/disk2s1, and flash the Bitnodes Hardware image ([bitnodes-hardware-2016-10-28.img.xz](https://hw.bitnodes.io/static/xz/bitnodes-hardware-2016-10-28.img.xz) - 1.1GB - [md5sum](https://hw.bitnodes.io/static/xz/bitnodes-hardware-2016-10-28.img.xz.md5sum)) into the entire disk of the eMMC, e.g. /dev/rdisk2. `unxz` is available for download from [XZ Utils](http://tukaani.org/xz/).
+Unmount the boot volume as shown in the output of the `df` command, e.g. /dev/disk2s1, and flash the Bitnodes Hardware image into the entire disk of the eMMC, e.g. /dev/rdisk2. `unxz` is available for download from [XZ Utils](http://tukaani.org/xz/).
 
     $ sudo diskutil unmount /dev/disk2s1
     $ unxz bitnodes-hardware-2016-10-28.img.xz
